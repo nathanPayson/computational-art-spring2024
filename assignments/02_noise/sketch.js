@@ -111,7 +111,5 @@ function draw() {
 
     //circle of circles, size determined by noise
 
-
-
     }
     //if time, implement hidden images?
