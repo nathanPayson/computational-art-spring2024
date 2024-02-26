@@ -1,5 +1,5 @@
 let boxes = [];
-let numBoxes = 10;
+let numBoxes =10;
 function setup() {
     createCanvas(600, 600);
 /*    let box = new Box(200, 200, 300, 300, 2)
