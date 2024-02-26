@@ -3,7 +3,7 @@
 
 let partSystem;
 function setup() {
-    createCanvas(700, 700);
+    createCanvas(1300, 700);
     partSystem = new particleSystem();
 }
 
