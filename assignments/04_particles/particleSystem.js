@@ -24,11 +24,14 @@ class particleSystem {
         for (let particle of this.particles) {
             particle.show();
             particle.update();
-            if (particle.destroy == true) {
-                //this.particles=this.particles.slice(0,indexOf(particle)) + this.particles(indexOf(particle+1));
-            }
-               
         }
+        for (let i = this.particles.length - 1; i >= 0; i--) {
+            if (this.particles[i].destroy) {
+                this.particles.splice(i, 1);
+            }
+        }
+               
+        
 
     }
 }

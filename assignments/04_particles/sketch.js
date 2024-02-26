@@ -1,4 +1,4 @@
-//TO DO: Lifetime, Color Palette Tweaking, Click to Reset background/Particle System
+//TO DO: Color Palette Tweaking, Click to Reset background/Particle System
 
 
 let partSystem;
