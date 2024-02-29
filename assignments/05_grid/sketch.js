@@ -1,5 +1,5 @@
-let numCellsWidth = 20;
-let numCellsHeight = 20;
+let numCellsWidth = 50;
+let numCellsHeight = 50;
 let cellWidth;
 let cellHeight;
 let colorArray = [];
@@ -8,14 +8,14 @@ let noiseOffset = 0;
 let strokeOffset = 0;
 let lineArray = [];
 function setup() {
-    createCanvas(600, 400);
+    createCanvas(800, 600);
 
 
     cellWidth = width / numCellsWidth;
     cellHeight = height / numCellsHeight;
     for (let i = 0; i < numCellsWidth * numCellsHeight; i++) {
-        colorArray.push(random(0, 50));
-        colorArray.push(random(150, 255));
+        colorArray.push(random(0, 20));
+        colorArray.push(random(200, 255));
         colorArray.push(random(30, 255));
     }
     for (let i = 0; i < numCellsWidth * numCellsHeight; i++) {
@@ -46,8 +46,8 @@ function drawGrid() {
             let b = colorArray[3 * (xIndex * numCellsHeight + yIndex) + 2];
 
             b = (b + colorOffset) % 225 + 30;
-            g = (g + colorOffset) % 105 + 150;
-            r = (r + colorOffset) % 50;
+            g = (g + colorOffset) % 55 + 150;
+            r = (r + colorOffset) % 20;
 
             fill(color(r, g, b));
             rect(0, 0, cellWidth, cellHeight,map(noise(x*0.1+noiseOffset,y*0.1+noiseOffset),0,1,0,15));
@@ -60,7 +60,7 @@ function drawGrid() {
             //line(r1, r2, r3, r4);
             pop();
         }
-        colorOffset += 0.02;
+        colorOffset += 0.005;
         noiseOffset += 0.0005;
         strokeOffset += 0.001;
     }
